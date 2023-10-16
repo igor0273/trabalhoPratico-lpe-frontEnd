@@ -58,8 +58,6 @@ function Empresa() {
         recuperaEmpresas();
     }
 
-
-
     const recuperaEmpresas = async () => {
         try {
             setCarregando(true);

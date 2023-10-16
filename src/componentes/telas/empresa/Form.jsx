@@ -8,7 +8,7 @@ function Form() {
     const { objeto, handleChange, acaoCadastrar, alerta } = useContext(EmpresaContext);
 
     return (
-        <Dialogo id='modalEdicaoEmpresa' titulo="Empresa" idformulario="formEdicao"
+        <Dialogo id='modalEdicao' titulo="Empresa" idformulario="formEdicaoEmpresa"
             acaoCadastrar={acaoCadastrar}>
             <Alerta alerta={alerta} />
             <CampoEntrada id='txtId' label="Código" tipo="number"
@@ -19,7 +19,7 @@ function Form() {
             <CampoEntrada id="txtCnpj" label="CNPJ" tipo="number"
                 name="cnpj" value={objeto.cnpj} handlechange={handleChange}
                 requerido={true} readonly={false} textovalido="CNPJ Ok"
-                textoinvalido="Informe o CNPJ" maximocaracteres={14} />
+                textoinvalido="Informe o CNPJ" maximocaracteres={14} minimocaracteres={14} />
 
             <CampoEntrada id="txtNome" label="Nome" tipo="text"
                 name="nome" value={objeto.nome} handlechange={handleChange}

@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@popperjs/core/dist/cjs/popper.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import Home from "./componentes/telas/Home";
+import Empresa from "./componentes/telas/empresa/Empresa";
+import Funcionario from "./componentes/telas/funcionario/Funcionario";
+import Login from "./componentes/telas/login/Login";
+import MenuPublico from "./componentes/telas/MenuPublico";
+import MenuPrivado from "./componentes/telas/MenuPrivado";
+
+const router = createBrowserRouter([
+  {
+    path : "/",
+    element : <MenuPublico/>,
+    children : [
+      {
+        index : true,
+        element : <Home/>
+      },
+      {
+        path : "login",
+        element : <Login/>
+      }   
+    ]
+  },
+  {
+    path : "/privado",
+    element : <MenuPrivado/>,
+    children : [
+      {
+        index : true,
+        element : <Home/>
+      },
+      {
+        path : "empresa",
+        element :  <Empresa/>
+      }
+      ,
+      {
+        path : "funcionario",
+        element :  <Funcionario/>
+      },
+      {
+        path : "login",
+        element : <Login/>
+      }   
+    ]
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router}/>
   );
 }
 

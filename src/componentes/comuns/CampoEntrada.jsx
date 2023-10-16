@@ -1,5 +1,5 @@
 function CampoEntrada({id , label, tipo , name, value, handlechange,
-    requerido, readonly, textovalido, textoinvalido, maximocaracteres}) {
+    requerido, readonly, textovalido, textoinvalido, maximocaracteres,minimocaracteres}) {
 
     return (
         <div className="form-group">
@@ -16,6 +16,7 @@ function CampoEntrada({id , label, tipo , name, value, handlechange,
                 required={requerido}
                 readOnly={readonly}
                 maxLength={maximocaracteres}
+                minLength={minimocaracteres}
             />
             <div className="valid-feedback">
                 {textovalido}

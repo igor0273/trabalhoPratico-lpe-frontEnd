@@ -16,8 +16,8 @@ function Tabela() {
                 onClick={() => novoObjeto()}>
                 Novo <i className="bi bi-file-earmark-plus"></i>
             </button>
-            {listaObjetos.length === 0 && <h1>Nenhum Funcionario encontrado</h1>}
-            {listaObjetos.length > 0 && (
+            {listaObjetos == null && <h1>Nenhum Funcionario encontrado</h1>}
+            {listaObjetos.length != null && (
                 <table className="table">
                     <thead>
                         <tr>
@@ -47,7 +47,7 @@ function Tabela() {
                                 <td>{objeto.nome}</td>
                                 <td>{objeto.cpf}</td>
                                 <td>{objeto.rg}</td>
-                                <td>{objeto.empresa.nome}</td>
+                        
                             </tr>
                         ))}
                     </tbody>

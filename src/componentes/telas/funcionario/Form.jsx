@@ -10,7 +10,7 @@ function Form(){
     = useContext(FuncionarioContext);
 
     return(
-        <Dialogo id="modalEdicao" titulo="Produto" idformulario="formEdicao"
+        <Dialogo id="modalEdicao" titulo="Funcionario" idformulario="formEdicaoFuncionario"
         acaoCadastrar={acaoCadastrar}>
         <Alerta alerta={alerta} />
         <CampoEntrada id="txtCodigo" label="Código" tipo="number"
@@ -46,7 +46,7 @@ function Form(){
             textovalido="Empresa OK"
             textoinvalido="Informe a Empresa">
             {
-                listaEmpresa.map((emp) => (
+               listaEmpresa != null && listaEmpresa.map((emp) => (
                     <option key={emp.codigo} value={emp.codigo}>
                         {emp.nome}
                     </option>
