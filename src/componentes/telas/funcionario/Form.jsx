@@ -46,7 +46,7 @@ function Form(){
             textovalido="Empresa OK"
             textoinvalido="Informe a Empresa">
             {
-               listaEmpresa != null && listaEmpresa.map((emp) => (
+                listaEmpresa.map((emp) => (
                     <option key={emp.codigo} value={emp.codigo}>
                         {emp.nome}
                     </option>

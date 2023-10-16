@@ -22,7 +22,7 @@ function Funcionario() {
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({ codigo: "", nome: "" });
     const [carregando, setCarregando] = useState(false);
-    const [listaCategorias, setListaCategorias] = useState([]);
+    const [listaEmpresa, setListaEmpresa] = useState([]);
 
     const novoObjeto = () => {
         setEditar(false);
@@ -82,7 +82,7 @@ function Funcionario() {
     }
 
     const recuperaEmpresas = async () => {
-        setListaCategorias(await getEmpresaServico());
+        setListaEmpresa(await getEmpresaServico());
     }
 
     const remover = async codigo => {
@@ -116,7 +116,7 @@ function Funcionario() {
         <FuncionarioContext.Provider value={{
             alerta, setAlerta, listaObjetos, remover,
             objeto, editar, acaoCadastrar,
-            handleChange, novoObjeto, editarObjeto, listaCategorias
+            handleChange, novoObjeto, editarObjeto, listaEmpresa
         }}>
             <Carregando carregando={carregando}>
                 <Tabela />

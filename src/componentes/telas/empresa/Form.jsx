@@ -27,7 +27,7 @@ function Form() {
                 maximocaracteres={100} />
 
             <CampoEntrada id="txtRazaoSocial" label="Razão Social" tipo="text"
-                name="razaoSocial" value={objeto.razaoSocial} handlechange={handleChange}
+                name="razaosocial" value={objeto.razaosocial} handlechange={handleChange}
                 requerido={true} readonly={false} textovalido="Razão Social OK" textoinvalido="Informe o Razão Social"
                 maximocaracteres={100} />
 
