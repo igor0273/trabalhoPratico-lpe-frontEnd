@@ -22,7 +22,7 @@ function Form(){
             maximocaracteres={40} />
             
         <CampoEntrada id="txtCpf" label="CPF" tipo="number"
-            name="cpf" value={objeto.cpf}
+            name="cpf" value={objeto.cfp}
             handlechange={handleChange}
             requerido={true} readonly={false}
             textovalido="CPF OK" textoinvalido="Informe o CPF"

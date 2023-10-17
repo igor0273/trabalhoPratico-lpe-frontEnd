@@ -45,7 +45,7 @@ function Tabela() {
                                 </td>
                                 <td>{objeto.codigo}</td>
                                 <td>{objeto.nome}</td>
-                                <td>{objeto.cpf}</td>
+                                <td>{objeto.cfp}</td>
                                 <td>{objeto.rg}</td>
                         
                             </tr>
