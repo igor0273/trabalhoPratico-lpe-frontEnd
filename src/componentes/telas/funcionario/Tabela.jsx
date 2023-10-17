@@ -47,7 +47,7 @@ function Tabela() {
                                 <td>{objeto.nome}</td>
                                 <td>{objeto.cfp}</td>
                                 <td>{objeto.rg}</td>
-                        
+                                <td>{objeto.empresa + " - " + objeto.nomeempresa}</td>
                             </tr>
                         ))}
                     </tbody>
