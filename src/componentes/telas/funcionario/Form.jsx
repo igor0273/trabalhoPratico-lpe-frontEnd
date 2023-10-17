@@ -14,7 +14,6 @@ function Form(){
         acaoCadastrar={acaoCadastrar}>
         <Alerta alerta={alerta} />
     
-
         <CampoEntrada id="txtNomeFunc" label="Nome" tipo="text"
             name="nome" value={objeto.nome}
             handlechange={handleChange}

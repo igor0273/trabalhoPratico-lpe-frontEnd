@@ -27,7 +27,7 @@ function Funcionario() {
     const novoObjeto = () => {
         setEditar(false);
         setAlerta({ status: "", message: "" });
-        setObjeto({ codigo: 0, nome: "" });
+        setObjeto({ codigo: 0, nome: "",cpf:"",rg:"" });
     }
 
     const editarObjeto = async codigo => {

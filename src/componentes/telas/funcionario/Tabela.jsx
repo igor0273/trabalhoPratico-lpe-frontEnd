@@ -17,7 +17,7 @@ function Tabela() {
                 Novo <i className="bi bi-file-earmark-plus"></i>
             </button>
             {listaObjetos == null && <h1>Nenhum Funcionario encontrado</h1>}
-            {listaObjetos.length != null && (
+            {listaObjetos.length > 0 && (
                 <table className="table">
                     <thead>
                         <tr>
