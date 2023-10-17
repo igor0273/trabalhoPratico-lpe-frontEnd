@@ -13,13 +13,9 @@ function Form(){
         <Dialogo id="modalEdicao" titulo="Funcionario" idformulario="formEdicaoFuncionario"
         acaoCadastrar={acaoCadastrar}>
         <Alerta alerta={alerta} />
-        <CampoEntrada id="txtCodigo" label="Código" tipo="number"
-            name="codigo" value={objeto.codigo}
-            handlechange={handleChange}
-            requerido={false} readonly={true}
-            maximocaracteres={5} />
+    
 
-        <CampoEntrada id="txtNome" label="Nome" tipo="text"
+        <CampoEntrada id="txtNomeFunc" label="Nome" tipo="text"
             name="nome" value={objeto.nome}
             handlechange={handleChange}
             requerido={true} readonly={false}

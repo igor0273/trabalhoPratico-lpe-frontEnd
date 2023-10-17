@@ -27,16 +27,7 @@ function Funcionario() {
     const novoObjeto = () => {
         setEditar(false);
         setAlerta({ status: "", message: "" });
-        setObjeto({
-            codigo: 0,
-            nome: "",
-            descricao: "",
-            quantidade_estoque: "",
-            valor: "",
-            ativo: "",
-            data_cadastro: new Date().toISOString().slice(0, 10),
-            categoria: ""
-        });
+        setObjeto({ codigo: 0, nome: "" });
     }
 
     const editarObjeto = async codigo => {
